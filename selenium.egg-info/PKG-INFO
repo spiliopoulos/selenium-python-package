@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: selenium
-Version: 3.0.2
+Version: 3.0.1
 Summary: Python bindings for Selenium
 Home-page: https://github.com/SeleniumHQ/selenium/
 Author: UNKNOWN
@@ -17,17 +17,17 @@ Description: ======================
         
         The `selenium` package is used to automate web browser interaction from Python.
         
-        +-----------+--------------------------------------------------------------------------------------+
-        | **Home**: | http://www.seleniumhq.org                                                            |
-        +-----------+--------------------------------------------------------------------------------------+
-        | **Docs**: | `selenium package API <https://seleniumhq.github.io/selenium/docs/api/py/api.html>`_ |
-        +-----------+--------------------------------------------------------------------------------------+
-        | **Dev**:  | https://github.com/SeleniumHQ/Selenium                                               |
-        +-----------+--------------------------------------------------------------------------------------+
-        | **PyPI**: | https://pypi.python.org/pypi/selenium                                                |
-        +-----------+--------------------------------------------------------------------------------------+
-        | **IRC**:  | **#selenium** channel on freenode                                                    |
-        +-----------+--------------------------------------------------------------------------------------+
+        +-----------+-----------------------------------------------------------------------------------+
+        | **Home**: | http://www.seleniumhq.org                                                         |
+        +-----------+-----------------------------------------------------------------------------------+
+        | **Docs**: | https://seleniumhq.github.io/selenium/docs/api/py/api.html                        |
+        +-----------+-----------------------------------------------------------------------------------+
+        | **Dev**:  | https://github.com/SeleniumHQ/selenium                                            |
+        +-----------+-----------------------------------------------------------------------------------+
+        | **PyPI**: | https://pypi.python.org/pypi/selenium                                             |
+        +-----------+-----------------------------------------------------------------------------------+
+        | **IRC**:  | **#selenium** channel on freenode                                                 |
+        +-----------+-----------------------------------------------------------------------------------+
         
         Several browsers/drivers are supported (Firefox, Chrome, Internet Explorer, PhantomJS), as well as the Remote protocol.
         
@@ -40,35 +40,15 @@ Description: ======================
         Installing
         ==========
         
-        If you have `pip <https://pip.pypa.io/>`_ on your system, you can simply install or upgrade the Python bindings::
+        If you have `pip <http://www.pip-installer.org>`_ on your system, you can simply install or upgrade the Python bindings::
         
             pip install -U selenium
         
-        Alternately, you can download the source distribution from `PyPI <http://pypi.python.org/pypi/selenium>`_ (e.g. selenium-3.0.2.tar.gz), unarchive it, and run::
+        Alternately, you can download the source distribution from `PyPI <http://pypi.python.org/pypi/selenium>`_ (e.g. selenium-3.0.1.tar.gz), unarchive it, and run::
         
             python setup.py install
         
         Note: both of the methods described above install `selenium` as a system-wide package  That will require administrative/root access to their machine.  You may consider using a `virtualenv <http://www.virtualenv.org/>`_ to create isolated Python environments instead.
-        
-        Drivers
-        =======
-        
-        Selenium requires a driver to interface with the chosen browser. Firefox,
-        for example, requires `geckodriver <https://github.com/mozilla/geckodriver/releases>`_, which needs to be installed before the below examples can be run. Make sure it's in your `PATH`, e. g., place it in `/usr/bin` or `/usr/local/bin`.
-        
-        Failure to observe this step will give you an error `selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable needs to be in PATH.`
-        
-        Other supported browsers will have their own drivers available. Links to some of the more popular browser drivers follow.
-        
-        +--------------+-----------------------------------------------------------------------+
-        | **Chrome**:  | https://sites.google.com/a/chromium.org/chromedriver/downloads        |
-        +--------------+-----------------------------------------------------------------------+
-        | **Edge**:    | https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/ |
-        +--------------+-----------------------------------------------------------------------+
-        | **Firefox**: | https://github.com/mozilla/geckodriver/releases                       |
-        +--------------+-----------------------------------------------------------------------+
-        | **Safari**:  | https://webkit.org/blog/6900/webdriver-support-in-safari-10/          |
-        +--------------+-----------------------------------------------------------------------+
         
         Example 0:
         ==========
@@ -99,7 +79,7 @@ Description: ======================
             browser = webdriver.Firefox()
         
             browser.get('http://www.yahoo.com')
-            assert 'Yahoo!' in browser.title
+            assert 'Yahoo' in browser.title
         
             elem = browser.find_element_by_name('p')  # Find the search box
             elem.send_keys('seleniumhq' + Keys.RETURN)
@@ -146,11 +126,7 @@ Description: ======================
         Use The Source Luke!
         ====================
         
-        View source code online:
-        
-        +-----------+-------------------------------------------------------+
-        | official: | https://github.com/SeleniumHQ/selenium/tree/master/py |
-        +-----------+-------------------------------------------------------+
+        View source code online at https://github.com/SeleniumHQ/selenium/tree/master/py/
         
 Platform: UNKNOWN
 Classifier: Development Status :: 5 - Production/Stable

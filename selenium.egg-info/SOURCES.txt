@@ -1,4 +1,3 @@
-LICENSE
 MANIFEST.in
 setup.cfg
 setup.py
